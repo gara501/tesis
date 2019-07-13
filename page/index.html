@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>tesis-app</title>
+    <link href="styles.css" rel="stylesheet">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+  </head>
+<body>
+  <noscript>
+    <strong>We're sorry but notes doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="app" class="container">
+    <menu-cmp></menu-cmp>
+    <principal-comp></principal-comp>
+    <planification-comp></planification-comp>
+    <exercises-comp></exercises-comp>
+    <results-comp></results-comp>
+    <authors-comp></authors-comp>
+    <footer-comp></footer-comp>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue2-smooth-scroll"></script>
+  <script>
+   Vue.component('menu-cmp', {
+    data: function () {
+      return {
+        classmenu: 'menu-hidden'      
+      }
+    },
+    methods: {
+      toggleMenu (data) {
+        if (this.classmenu.length > 0) {
+          this.classmenu = ''
+        } else {
+          this.classmenu = 'menu-hidden'
+        }
+      },
+    },
+    template: `<div id="menu" class="menu">
+      <nav class="menu-nav">
+        <button class="menu-button" v-on:click="toggleMenu"><i class="material-icons">menu</i></button>
+        <ul class="menu-general" :class="classmenu">
+          <li>
+            <a href="https://www.udca.edu.co" class="logo_link" target="_blank">
+              <img src="images/udca_logo.png" alt="" class="logo" />
+            </a>
+          </li>
+          <li>
+            <a href="#init" v-smooth-scroll>Inicio</a>
+          </li>
+          <li>
+            <a href="#planification" v-smooth-scroll>Planificación</a>
+          </li>
+          <li>
+            <a href="#exercises" v-smooth-scroll>Ejercicios</a>
+          </li>
+          <li>
+            <a href="#results" v-smooth-scroll>Resultados</a>
+          </li>
+          <li>
+            <a href="#authors" v-smooth-scroll>Autores</a>
+          </li>
+        </ul>
+      </nav>
+    </div>`
+  })
+  Vue.component('principal-comp', {
+    template: `<div id="principal" class="principal component">
+    <div class="row justify-content-center">
+      <div class="section-background bg1"></div>
+      <div class="col-10 section-intro">
+        <div class="intro">
+          <h1>Efectos del entrenamiento de resistencia de core en oficinistas entre 25 y 30 años</h1>
+          <p>Las personas hoy en día poseen cargos laborales donde existe una gran demanda de esfuerzo postural
+          durante tiempos prolongados, los trabajadores no logran entender la importancia que tiene el core 
+          en esta clase de situaciones y que a futuro, si este no es tratado adecuadamente, podría llegar
+          a afectar de manera súbita, la calidad de vida del sujeto.</p>
+          <p>En el menú encontrarás las diferentes secciones de esta investigación, pruebas, ejercicios y conclusiones.</p>
+        </div>
+      </div>
+    </div>
+      
+    </div>`
+  })
+  Vue.component('planification-comp', {
+    template: `<div id="planification" class="component">
+    <div class="row justify-content-center">
+      <div class="section-background bg2"></div>
+      <div class="col-10 section-intro">
+        <div class="intro">
+          <h1>Planificación</h1>
+          <p>La muestra seleccionada para este proyecto fue: personas oficinistas de 25 a 30 años de edad, 
+          4 hombres (40%) y 6 mujeres (60%) para un total de 10 sujetos, todos voluntarias, con una media de 67,8 Kg 
+          con una desviación estándar del 2,7 en el peso y 1,68 m con una desviación estándar de 4,3 cm en la talla 
+          obteniendo un coeficiente de variación del 186% y del 731% resultando unos datos no homogéneos en peso y 
+          talla respectivamente, cada una cumpliendo un horario laboral de 8 horas sentados frente a un escritorio todos los sujetos 
+          fueron conscientes firmaron y leyeron el consentimiento informado que fue prioridad para dar inicio al experimento.</p>
+          <h4>Criterios de inclusión</h4>
+          <p>Lo que se tuvo en cuenta a la hora de incluirlos al proyecto fue: </p>
+          <ol>
+            <li>Pacientes moderadamente activos (de 1 a 3 veces por semana entrenando) = 36,5 mets o más.</li>
+            <li>Edad de 25 - 30 años.</li>
+            <li>Posibilidad de que llevara a cabo un entrenamiento adaptado.</li>
+          </ol>
+          <h4>Exclusión:</h4>
+          <ol>
+            <li>No tener  patologías relacionadas a aplastamientos, cifosis, escoliosis etc.</li> 
+            <li>Sin antecedentes de hipertensión o diabetes.</li>
+            <li>Imposibilidad de seguir la dieta y/o rutina.</li>
+            <li>Consumo de alcohol superior a 38g/día (3 vasos de cerveza), fumador actual.</li>
+          </ol>
+          <h4>Tests</h4>
+          <div class="row block">
+            <div class="col-12">
+              <p>Tabla de baremo plancha prona, creada por schellenberg para evaluar la estabilización lumbar.</p>
+              <div class="table-container">
+                <table class="tg">
+                  <tr>
+                    <th class="tg-vxkr"></th>
+                    <th class="tg-vxkr">Normal</th>
+                    <th class="tg-vxkr">Bueno</th>
+                    <th class="tg-vxkr">Excelente</th>
+                  </tr>
+                  <tr>
+                    <td class="tg-0r18">Hombres</td>
+                    <td class="tg-0r18">60''</td>
+                    <td class="tg-0r18">90''</td>
+                    <td class="tg-0r18">120''</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-0r18">Mujeres</td>
+                    <td class="tg-0r18">30''</td>
+                    <td class="tg-0r18">50''</td>
+                    <td class="tg-0r18">70''</td>
+                  </tr>
+                </table>
+                <span class="quote">Tabla 1: (Schellenberg et al.,  2007)</span>
+              </div>
+            </div>
+          </div>
+          <div class="row block">
+              <div class="col-12">
+                <p>Esta tabla de baremación está basada en la investigación realizada por McGill 
+                  para evaluar la resistencia y estabilidad del core en en jóvenes sanos.</p>
+                  <div class="table-container">
+                    <table class="tg">
+                      <tr>
+                        <th class="tg-vxkr"></th>
+                        <th class="tg-vxkr">Hombres</th>
+                        <th class="tg-vxkr">Mujeres</th>
+                      </tr>
+                      <tr>
+                        <td class="tg-0r18">Extensión lumbar o Sorensen</td>
+                        <td class="tg-0r18">146''</td>
+                        <td class="tg-0r18">189''</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0r18">Plancha Lateral izquierda</td>
+                        <td class="tg-0r18">97''</td>
+                        <td class="tg-0r18">66''</td>
+                      </tr>
+                      <tr>
+                        <td class="tg-0r18">Plancha Lateral derecha</td>
+                        <td class="tg-0r18">94''</td>
+                        <td class="tg-0r18">64''</td>
+                      </tr>
+                    </table>
+                    <span class="quote">Tabla 1: (Schellenberg et al.,  2007)</span>
+                  </div>
+              </div>
+            </div>
+            <div class="row block">
+            <div class="col-12">
+              <h4>Distribución de entrenamiento propuesta</h4>
+              <p>Esta planificación se manejó por un intervalo de 4 semanas, en las que se trabajó con 
+              intensidades entre 20% al 35% sobre tiempo, de los sujetos entrenados.</p>
+              <p>La densidad al inicio fue de 1:3 finalizando con 1:1.</p>
+              <p>La clase de periodización usada fue: <a href="https://powerexplosive.com/la-periodizacion-ondulada-al-detalle/" target="_blank">ondulaciones.</a></p>
+              <div class="img-planification">
+                <img src="images/planificacion.png" />
+              </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+        
+      </div>
+    </div>
+      `
+  })
+  Vue.component('exercises-comp', {
+    template: `<div id="exercises" class="component">
+     <div class="row justify-content-center">
+      <div class="section-background bg4"></div>
+        <div class="col-10 section-intro">
+          <div class="intro">
+            <h1>Ejercicios Usados</h1>
+              <p>Los siguientes fueron los ejercicios usados en el plan de entrenamiento.</p>
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <h5>Plancha frontal y lateral</h5>
+                  <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <h5>Bird-dog</h5>
+                <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                  <h5>Dead-bug</h5>
+                  <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <h5>Press Pallof</h5>
+                  <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `
+  })
+  Vue.component('results-comp', {
+     data: function () {
+      return {
+        src: 'images/people.png',
+        imagename: 'Lista de participantes'
+      }
+    },
+    methods: {
+      showImage (data) {
+        console.log(data.target.classList)
+        
+        if (data.target.classList.contains('participants')) {
+          this.src = 'images/people.png';
+          this.imagename = 'Lista de participantes';
+        } else if (data.target.classList.contains('entrance')) {
+          this.src = 'images/people2.png';
+          this.imagename = 'Entradas';
+        } else if (data.target.classList.contains('exit')) {
+          this.src = 'images/people3.png';
+          this.imagename = 'Salidas';
+        } else if (data.target.classList.contains('difference')) {
+          this.src = 'images/people4.png';
+          this.imagename = 'Diferencia entre los valores';
+        } else {
+          this.src = 'images/people5.png';
+          this.imagename = 'Estadisticas';
+        }
+        
+      },
+    },
+    template: `<div id="results" class="component">
+     <div class="row justify-content-center">
+      <div class="section-background bg3"></div>
+        <div class="col-10 section-intro">
+          <div class="intro">
+            <h1>Resultados</h1>
+            <p>Las siguientes son las tablas de resultados del programa aplicado a 14 personas.</p>
+            <div class="buttons-data">
+              <button class="btn btn-outline-primary participants" v-on:click="showImage">Ver participantes</button>
+              <button class="btn btn-outline-primary entrance" v-on:click="showImage">Ver Entradas</button>
+              <button class="btn btn-outline-primary exit" v-on:click="showImage">Ver Salidas</button>
+              <button class="btn btn-outline-primary difference" v-on:click="showImage">Ver Diferencia</button>
+              <button class="btn btn-outline-primary desv" v-on:click="showImage">Estadisticas</button>
+            </div>
+            <div class="image-data-container">
+              <img :src="src" alt="img1" />
+              <p>{{ imagename }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`
+  })
+  Vue.component('footer-comp', {
+    template: `<div class="footer row">
+      <div class="col-md-4 offset-md-4 text-center">
+        <span>Ciencias del deporte - UDCA - 2019</span>
+      </div>
+    </div>`
+  })
+  Vue.component('authors-comp', {
+    template: `<div id="authors" class="authors component">
+     <div class="row justify-content-center">
+      <div class="section-background bg5"></div>
+        <div class="col-10 section-intro">
+          <div class="intro intro-trainers">
+          <h1>Autores</h1>
+            <div class="row justify-content-center profiles">
+            <div class="col-sm-12 col-lg-6">
+                <img src="images/pipe.png" />
+                <h4 class="author-name"> Luis Felipe Cardona
+                  <span>Estudiante ciencias del deporte</span>
+                </h4>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+                <img src="images/andresh.png" />
+                <h4 class="author-name"> Andrés Herrera
+                  <span>Estudiante ciencias del deporte</span>
+                </h4>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <img class="logos-bottom" src="images/ciencias.png" />
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <img class="logos-bottom" src="images/udca_logo.png" />
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `
+  })
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!'
+    }
+  })
+</script>
+</body>

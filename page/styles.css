@@ -1,0 +1,246 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2rem !important;
+  padding: 50px 0 20px 0;
+  text-transform: uppercase;
+}
+
+h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.component {
+  background: #fff;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.images-data {
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.list-authors {
+  list-style: none;
+}
+
+.author-name {
+  margin-top: 20px;
+}
+
+.image-data-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.buttons-data {
+  display: flex;
+  flex-flow: column;
+}
+
+.author-name span {
+  font-size: 12px;
+  font-style: italic;
+  display: block;
+}
+
+.footer {
+  padding: 20px 0;
+}
+
+.img-planification img {
+  text-align: center;
+  width: 100%;
+}
+
+.table-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg .tg-0r18{font-size:14px;border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-vxkr{font-weight:bold;font-size:14px;background-color:#000000;color:#ffffff;border-color:#cbcefb;text-align:center;vertical-align:top}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+
+.quote {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.block {
+  margin: 20px 0;
+}
+
+.profiles img {
+  max-height: 200px;
+  text-align: center;
+  width: auto;
+}
+
+.section-intro {
+  background-color: #fff;
+  position: relative;
+  top: -100px;
+}
+
+.intro {
+  padding: 0 20px;
+}
+
+.intro-trainers {
+  text-align: center;
+}
+
+.logos-bottom {
+  height: 120px;
+  margin-top: 30px;
+  width: auto !important;
+}
+
+
+.section-background {
+  height: 400px;
+  width: 100%;
+}
+
+.bg1 {
+  background: url('images/bg1.jpg') no-repeat;
+  background-size: cover;
+}
+
+.bg2 {
+  background: url('images/bg2.jpg') no-repeat;
+  background-size: cover;
+}
+
+.bg3 {
+  background: url('images/bg3.jpg') no-repeat;
+  background-size: cover;
+}
+
+.bg4 {
+  background: url('images/bg4.jpg') no-repeat;
+  background-size: cover;
+}
+
+.bg5 {
+  background: url('images/bg5.jpg') no-repeat;
+  background-size: cover;
+}
+
+.menu-button {
+  border: none;
+  background: #fff;
+  outline: none;
+}
+
+.menu {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+}
+
+.menu nav ul {
+  background: #fff;
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  width: 300px;
+}
+
+.principal {
+  margin-top: 70px;
+}
+
+.menu-hidden {
+  transform: translateX(-3000px);
+  transition: .4s ease-in all;
+}
+
+.menu-general li {
+  margin: 10px 0;
+}
+
+.menu-general li a {
+  color: #222;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.5rem !important;
+    padding: 50px 0 20px 0;
+    text-transform: uppercase;
+  }
+
+  .intro {
+    padding: 0 50px;
+  }
+
+  .principal {
+    margin-top: 0;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .menu {
+    left: 0;
+    margin: 30px auto;
+    position: relative;
+    top: 0;
+  }
+  
+  .menu nav ul {
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .menu nav ul li {
+    width: auto;
+  }
+  
+  .menu nav ul li a {
+    color: #222;
+    text-decoration: none;
+    transition: 1s ease-in all;
+  }
+  
+  .menu nav ul li a:hover {
+    border-bottom: 1px solid black;
+    transition: 1s ease-in all;
+  }
+  
+  .menu nav ul li a.logo_link:hover {
+    border-bottom: none;
+  }
+
+  .menu-hidden {
+    transform: translateX(0);
+  }
+
+  .buttons-data {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}
