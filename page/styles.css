@@ -41,6 +41,10 @@ h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
+.image-data-container img {
+  width: 100%;
+}
+
 .buttons-data {
   display: flex;
   flex-flow: column;
@@ -103,11 +107,26 @@ h2, h3, h4, h5, h6 {
 }
 
 .logos-bottom {
-  height: 120px;
+  height: 100px;
   margin-top: 30px;
   width: auto !important;
 }
 
+.goto {
+  color: black;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.goto:after {
+  content: 'Top';
+  position: absolute;
+  left: 0;
+  top: 20px;
+  color: black;
+  font-size: 12px;
+}
 
 .section-background {
   height: 400px;
