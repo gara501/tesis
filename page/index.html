@@ -209,21 +209,21 @@
               <div class="row">
                 <div class="col-lg-6 col-sm-12">
                   <h5>Plancha frontal y lateral</h5>
-                  <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/ellf9wcejUM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                   <h5>Bird-dog</h5>
-                <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/pKvekbj6p9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
               <div class="row">
                 <div class="col-lg-6 col-sm-12">
                   <h5>Dead-bug</h5>
-                  <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%" height="315" src="https://www.youtube.com/embed/zQ-nB_1UtoE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                   <h5>Press Pallof</h5>
-                  <iframe width="100%%" height="315" src="https://www.youtube.com/embed/emQS4Vhaagk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  <iframe width="100%%" height="315" src="https://www.youtube.com/embed/F2j2lDd3zdk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
               </div>
             </div>
@@ -257,7 +257,7 @@
           this.imagename = 'Diferencia entre los valores';
         } else {
           this.src = 'images/people5.png';
-          this.imagename = 'Estadisticas';
+          this.imagename = 'Resultados';
         }
         
       },
@@ -271,15 +271,15 @@
             <h1>Resultados</h1>
             <p>Las siguientes son las tablas de resultados del programa aplicado a 14 personas.</p>
             <div class="buttons-data">
-              <button class="btn btn-outline-primary participants" v-on:click="showImage">Ver participantes</button>
-              <button class="btn btn-outline-primary entrance" v-on:click="showImage">Ver Entradas</button>
-              <button class="btn btn-outline-primary exit" v-on:click="showImage">Ver Salidas</button>
-              <button class="btn btn-outline-primary difference" v-on:click="showImage">Ver Diferencia</button>
-              <button class="btn btn-outline-primary desv" v-on:click="showImage">Estadisticas</button>
+              <button class="btn btn-primary participants" v-on:click="showImage">Ver participantes</button>
+              <button class="btn btn-primary entrance" v-on:click="showImage">Ver Entradas</button>
+              <button class="btn btn-primary exit" v-on:click="showImage">Ver Salidas</button>
+              <button class="btn btn-primary difference" v-on:click="showImage">Ver Diferencia</button>
+              <button class="btn btn-primary desv" v-on:click="showImage">Resultados</button>
             </div>
             <div class="image-data-container">
               <img :src="src" alt="img1" />
-              <p>{{ imagename }}</p>
+              <p class="image_foot">{{ imagename }}</p>
             </div>
           </div>
         </div>
